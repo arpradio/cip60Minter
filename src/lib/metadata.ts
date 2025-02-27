@@ -25,7 +25,7 @@ export function buildMetadata({
         "{get('cache.dependencies.assetName')}": {
           "name": `${mainArtist.name} - ${formData.releaseTitle}`,
           "image": `ipfs://${coverIPFS}`,
-          "music_metadata_version":"3",
+          "music_metadata_version":3,
           "release": {
             "release_type": "Single",
             "release_title": formData.releaseTitle,
