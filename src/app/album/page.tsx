@@ -231,7 +231,7 @@ export default function AlbumMinter() {
                 song: {
                   song_title: track.songTitle,
                   song_duration: `PT${track.duration.minutes}M${track.duration.seconds}S`,
-                  track_number: (index + 1).toString(),
+                  track_number: (index + 1),
                   ...(track.isExplicit && { explicit: `true` }),
                   ...(track.isAIGenerated && { ai_generated: `true` }),
 
