@@ -95,7 +95,7 @@ export function buildMetadata({
 
                 "song_duration": `PT${minutes}M${seconds}S`,
                 "song_title": formData.songTitle,
-                "track_number": "1",
+                "track_number": 1,
                 ...(formData.producer && { "producer": formData.producer }),
                 ...(formData.mastering_engineer && { "mastering_engineer": formData.mastering_engineer }),
                 ...(formData.mix_engineer && { "mix_engineer": formData.mix_engineer }),
