@@ -246,7 +246,7 @@ export default function MultiSongMinter() {
                         src: `ipfs://${song.songCID}`,
                         song: {
                           song_title: song.songTitle,
-                          track_number: (index + 1).toString(),
+                          track_number: (index + 1),
                           song_duration: `PT${song.duration.minutes}M${song.duration.seconds}S`,
                           artists: song.artists.map(artist => ({
                             name: artist.name,
