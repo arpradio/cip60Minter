@@ -18,7 +18,7 @@ export default function Header() {
             <div className="flex w-full justify-between items-center">
                 
                     <Link href="/">
-                        <Image className="h-auto m-auto" height={150} width={150} src="/psyencelab.png" alt="Arp Radio" />
+                        <Image className="h-auto m-auto" height={150} width={150} src="https://ipfs.io/ipfs/QmVYcr8RiFymU2LkvbYWdhNZ1PM5JwsPMHsSFVBJPRDmnP" alt="Arp Radio" />
                     </Link>
                     <nav className="flex  -mt-8 justify-end">
                         <ul className="flex bg-black/20 p-1 px-4 rounded-lg gap-x-5 border-[1px] border-zinc-200">
