@@ -379,7 +379,7 @@ export default function AlbumMinter() {
 
         <div className="text-center mb-6">
           <a href="https://psyencelab.media" target="_blank" rel="noopener noreferrer">
-            <Image src="/psyencelab.png" alt="PsyenceLab" width={400} height={100} className="mx-auto border-[1px] rounded-md" priority />
+            <Image src="https://ipfs.io/ipfs/QmVYcr8RiFymU2LkvbYWdhNZ1PM5JwsPMHsSFVBJPRDmnP" alt="PsyenceLab" width={400} height={100} className="mx-auto border-[1px] rounded-md" priority />
           </a>
           <h1 className="text-2xl mt-2 font-mono text-white">Be Your Own Minter!</h1>
           <h2 className="text-xl font-bold text-[#228fa7] mt-4 text-shadow">
