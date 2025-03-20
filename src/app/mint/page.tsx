@@ -33,6 +33,7 @@ export default function Page() {
             <h2 className="text-xs text-gray-300">Powered by</h2>
             <a href="https://gamechanger.finance/" target="_blank">
               <Image className="m-auto mt-2 border-gray-400 border-[1px]" src="/gc.png" width={400} height={400} alt="GameChanger"/>
+              <label className="text-amber-400 text-sm cursor-pointer">GameChanger Wallet</label>
             </a>
           </div>
         </div>
