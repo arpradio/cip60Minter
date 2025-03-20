@@ -1,9 +1,8 @@
 import './globals.css';
-import Header from '@/components/header';
 
 export const metadata = {
-  title: 'CIP-60 Music Tokens',
-  description: 'A CIP-60 music token minting and explorer application',
+  title: 'CIP-60 Music Token Minter',
+  description: 'A CIP-60 music token minting script collection',
 };
 
 export default function RootLayout({
@@ -14,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className="flex flex-col h-screen]"><Header/><div className="mt-20">{children}</div></body>
+      <body className="flex flex-col ">{children}</body>
     </html>
   );
 }

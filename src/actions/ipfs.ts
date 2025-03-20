@@ -1,8 +1,7 @@
 'use server'
 
 const PINATA_API_URL = 'https://api.pinata.cloud';
-const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB in bytes
-
+const MAX_FILE_SIZE = 100 * 1024 * 1024;
 interface PinataResponse {
   IpfsHash: string;
   PinSize: number;
@@ -48,17 +47,17 @@ export async function uploadToPinata(formData: FormData) {
     }
 
     const result: PinataResponse = await response.json();
-    return { 
-      success: true, 
+    return {
+      success: true,
       cid: result.IpfsHash,
       size: result.PinSize,
       timestamp: result.Timestamp
     };
   } catch (error) {
     console.error('Error uploading to Pinata:', error);
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Failed to upload file' 
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Failed to upload file'
     };
   }
 }
@@ -79,9 +78,9 @@ export async function verifyPinataCredentials(apiKey: string, apiSecret: string)
 
     return { success: true };
   } catch (error) {
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Failed to verify credentials' 
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Failed to verify credentials'
     };
   }
 }
