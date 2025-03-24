@@ -1,3 +1,4 @@
+// src/lib/validation.ts
 import { z } from 'zod';
 import type { ValidationResult } from '@/types';
 
@@ -30,7 +31,8 @@ export const cip60FormSchema = z.object({
   isAIGenerated: z.boolean(),
   isExplicit: z.boolean(),
   recordingOwner: z.string().min(1, "Recording owner is required"),
-  compositionOwner: z.string().min(1, "Composition owner is required"),
+  // Allow empty string for composition owner, we'll validate it in the refinement
+  compositionOwner: z.string(),
   isrc: z.string().optional(),
   iswc: z.string().optional(),
   quantity: z.number().int().positive("Quantity must be at least 1"),
@@ -47,7 +49,7 @@ export const cip60FormSchema = z.object({
   contributingArtists: z.array(contributingArtistSchema).optional().default([]),
   authors: z.array(authorSchema).optional().default([])
 }).refine(data => {
-  // If it's AI generated, don't require compositionOwner
+  // If it's AI generated, composition owner is not required
   if (data.isAIGenerated) return true;
   
   // Otherwise, composition owner is required
